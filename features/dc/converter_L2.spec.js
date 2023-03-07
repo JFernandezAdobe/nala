@@ -18,7 +18,7 @@ module.exports = {
         '/acrobat/online/compress-pdf.html',
       ],
       envs: '@adobe_stage',
-      tags: '@frictionless',
+      tags: '@frictionless_full',
     },
   ],
 };

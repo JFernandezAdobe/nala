@@ -8,7 +8,7 @@ module.exports = {
         '/acrobat/online/pdf-editor.html',
       ],
       envs: '@adobe_stage',
-      tags: '@frictionless',
+      tags: '@frictionless_full',
     },
   ],
 };
