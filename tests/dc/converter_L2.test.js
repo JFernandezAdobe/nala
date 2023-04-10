@@ -90,7 +90,6 @@ test.describe(`${name}`, () => {
       const input = fileInputList.filter((x) => x.pages.includes(url.match(pageNameRegex)[0]))[0];
       const converterBlock = page.locator(selectors['@pdf-converter']);
       const fileInput = page.locator(selectors[input.locator]);
-      const exportButton = page.locator(selectors['@export-convert-button']);
       const exportProgress = page.locator(selectors['@export-progress-bar']);
       const convertButton = page.locator(selectors['@convert-button']);
       const insertButton = page.locator(selectors['@insert-button']);
@@ -119,9 +118,9 @@ test.describe(`${name}`, () => {
       await fileInput.setInputFiles(input.file);
       if (url.includes('convert-pdf')) {
         await expect(async () => {
-          await expect(exportButton).toBeVisible();
-          await exportButton.click({ trial: true });
-          await exportButton.click();
+          await expect(convertButton).toBeVisible();
+          await convertButton.click({ trial: true });
+          await convertButton.click();
           await expect(exportProgress).toBeVisible();
         }).toPass({
           intervals: [1_000],
